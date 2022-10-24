@@ -10,6 +10,7 @@ const networkConfig = {
         subscriptionId: "4628",
         callbackGasLimit: "50000",
         interval: "30",
+        daiEthPriceFeed: "0xb4c4a493AB6356497713A78FFA6c60FB53517c63",
     },
     31337: {
         name: "hardhat",
@@ -22,8 +23,13 @@ const networkConfig = {
 };
 
 const developmentChains = ["hardhat", "localhost"];
+const frontEndContractsFile =
+    "../nextjs-smartcontract-lottery/constants/contractAddresses.json";
+const frontEndAbiFile = "../nextjs-smartcontract-lottery/constants/abi.json";
 
 module.exports = {
     networkConfig,
     developmentChains,
+    frontEndContractsFile,
+    frontEndAbiFile,
 };
